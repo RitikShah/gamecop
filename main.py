@@ -1,7 +1,7 @@
 import pygame
 from entity import Entity
 from keys import keys
-from color import green
+from color import green, black
 
 pygame.init()
 
@@ -27,6 +27,7 @@ def loop():
     char = Entity(green, (20, 60))
 
     while True:
+        pygame.draw.rect(WIN, black, pygame.Rect(0, 0, 600, 800))  #600 and 800 should be refactored
         pygame.draw.rect(WIN, char.color, char.rect)
 
         x_button()
@@ -34,6 +35,8 @@ def loop():
         key = pygame.key.get_pressed()
         if key[keys['escape']]:
             return 'quit'
+
+        char.move(key)
 
         pygame.display.flip()
         clock.tick(FPS)

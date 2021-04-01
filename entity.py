@@ -16,6 +16,17 @@ class Entity(pygame.sprite.Sprite):
         '''This bit [velocity] is hard coded; idk why'''
         self.velocity = 2   
 
+    ###
+    # This definitely isn't the best movement scheme
+    # We're probably trying to go for something more along the lines of
+    # 'fire boy and water girl' or 'hollow night'-ish
+    # I can probably figure out jumping, and set up a crouching scheme
+    # I don't know how to do collisions though
+    # I can set up the whole arena-ish area, like make a blocking diagram
+    # or a map of platforms the character can jump on
+    # Could you do the staying on the platforms when the 
+    # character jumps on them bit? 
+    ###
     def move(self, keys_pressed):
         if keys_pressed[pygame.K_a] and self.rect.x - self.velocity > 0: # move left spaceshit to the left; a pressed
             self.rect.x -= self.velocity

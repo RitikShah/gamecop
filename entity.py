@@ -25,7 +25,9 @@ class Entity(pygame.sprite.Sprite):
     # I can set up the whole arena-ish area, like make a blocking diagram
     # or a map of platforms the character can jump on
     # Could you do the staying on the platforms when the 
-    # character jumps on them bit? 
+    # character jumps on them bit? I'm not sure what that'd entail,
+    # but if you need something to happen before you can do that,
+    # please tell me  and I'll do it :)
     ###
     def move(self, keys_pressed):
         if keys_pressed[pygame.K_a] and self.rect.x - self.velocity > 0: # move left spaceshit to the left; a pressed
